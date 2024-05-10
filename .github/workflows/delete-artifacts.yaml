@@ -1,0 +1,14 @@
+name: delete-artifacts
+run-name: ${{ github.actor }} triggered delete-artifacts workflow.
+on:
+    workflow_dispatch:
+
+jobs:
+    delete-artifacts:
+        runs-on: ubuntu-latest
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+
+            - name: delete-artifacts
+              run: python .github/scripts/delete-repo-artifacts.py "${{ github.REPOSITORY }}" "${{ secrets.GH_TOKEN }}"
