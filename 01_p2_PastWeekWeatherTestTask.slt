@@ -1,0 +1,17 @@
+{
+    "job_class": "PipelineJob",
+    "job_name": "01_p2_PastWeekWeatherTestTask",
+    "note": "",
+    "parameters": {
+        "enabled": true,
+        "execution_timeout": 16,
+        "include_external_urls": true,
+        "job_type": "standard",
+        "pipeline_parameters": {},
+        "pipeline_path": "01_p2_PastWeekWeather",
+        "snaplex_path": "IW-Ground"
+    },
+    "schedule": {},
+    "trigger": {},
+    "trigger_type": "ScheduleTrigger"
+}

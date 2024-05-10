@@ -1,0 +1,854 @@
+{
+    "ai_map": {
+        "footprint": "H4sIAAAAAAAAA8srzckBAE/8yyUEAAAA"
+    },
+    "class_id": "com-snaplogic-pipeline",
+    "class_version": 9,
+    "link_map": {
+        "link100": {
+            "dst_id": "11111111-1111-1111-1111-000000000001",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000000",
+            "src_view_id": "output0"
+        },
+        "link101": {
+            "dst_id": "11111111-1111-1111-1111-000000000002",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000001",
+            "src_view_id": "outputResponse"
+        },
+        "link117": {
+            "dst_id": "11111111-1111-1111-1111-000000000004",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000003",
+            "src_view_id": "output0"
+        },
+        "link120": {
+            "dst_id": "11111111-1111-1111-1111-000000000003",
+            "dst_view_id": "input0",
+            "src_id": "11111111-1111-1111-1111-000000000002",
+            "src_view_id": "output0"
+        }
+    },
+    "property_map": {
+        "error": {
+            "error_behavior": {
+                "value": "none"
+            }
+        },
+        "info": {
+            "author": {
+                "value": "aleksandar.angelevski@iwconnect.com"
+            },
+            "label": {},
+            "notes": {
+                "value": "This is a description for the Current weather process derived from the SnapLogic pipeline itself."
+            },
+            "pipeline_doc_uri": {
+                "value": null
+            },
+            "purpose": {
+                "value": null
+            }
+        },
+        "input": {},
+        "output": {},
+        "settings": {
+            "error_param_table": {
+                "value": []
+            },
+            "error_pipeline": {
+                "expression": false,
+                "value": null
+            },
+            "imports": {
+                "value": []
+            },
+            "param_table": {
+                "value": [
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "Initial request from the source system."
+                        },
+                        "key": {
+                            "value": "requestID"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": null
+                        }
+                    },
+                    {
+                        "capture": {
+                            "value": true
+                        },
+                        "data_type": {
+                            "value": "string"
+                        },
+                        "description": {
+                            "value": "Name of the city"
+                        },
+                        "key": {
+                            "value": "city"
+                        },
+                        "required": {
+                            "value": false
+                        },
+                        "value": {
+                            "value": null
+                        }
+                    }
+                ]
+            },
+            "suspendable": {
+                "value": false
+            }
+        }
+    },
+    "render_map": {
+        "default_snaplex": null,
+        "detail_map": {
+            "11111111-1111-1111-1111-000000000000": {
+                "error": {},
+                "grid_x_int": 1,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000001": {
+                "error": {},
+                "grid_x_int": 2,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000002": {
+                "error": {},
+                "grid_x_int": 3,
+                "grid_y_int": 1,
+                "index": 0,
+                "input": {},
+                "output": {},
+                "recommendation_id": "d174c2c7-c7be-c018-4713-f91af4fdef88_0",
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "iris placeholder"
+            },
+            "11111111-1111-1111-1111-000000000003": {
+                "error": {},
+                "grid_x_int": 4,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            },
+            "11111111-1111-1111-1111-000000000004": {
+                "error": {},
+                "grid_x_int": 5,
+                "grid_y_int": 1,
+                "index": null,
+                "input": {},
+                "output": {},
+                "recommendation_id": null,
+                "rot_int": 0,
+                "rot_tail_int": 0,
+                "source": "snap catagory"
+            }
+        },
+        "pan_x_num": 0,
+        "pan_y_num": 0,
+        "scale_ratio": 1
+    },
+    "snap_map": {
+        "11111111-1111-1111-1111-000000000000": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000000",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Map - City Name"
+                    },
+                    "notes": {}
+                },
+                "input": {},
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": false
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": false,
+                                            "value": "Paris"
+                                        },
+                                        "targetPath": {
+                                            "value": "$city"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000001": {
+            "class_id": "com-snaplogic-snaps-apisuite-httpclient",
+            "class_version": 1,
+            "instance_id": "11111111-1111-1111-1111-000000000001",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {
+                            "label": {
+                                "expression": false,
+                                "label": "OpenWeatherAccount",
+                                "value": "OpenWeatherAccount"
+                            },
+                            "ref_class_id": {
+                                "value": "com-snaplogic-snaps-apisuite-accounts-basicauthaccount"
+                            },
+                            "ref_id": {
+                                "expression": false,
+                                "value": null
+                            }
+                        }
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "HTTP Client - Get Weather - GET"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "outputResponse": {
+                        "label": {
+                            "value": "Response"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "clientProperties": {
+                        "value": {
+                            "connection": {
+                                "value": {
+                                    "connTimeout": {
+                                        "value": 30
+                                    },
+                                    "cookiePolicy": {
+                                        "value": "RFC Lax"
+                                    },
+                                    "diskStagingProp": {
+                                        "value": false
+                                    },
+                                    "readTimeout": {
+                                        "value": 900
+                                    },
+                                    "trustAllCerts": {
+                                        "value": false
+                                    }
+                                }
+                            },
+                            "outputProps": {
+                                "value": {
+                                    "errorRespToErrorview": {
+                                        "value": true
+                                    },
+                                    "extractEntity": {
+                                        "value": false
+                                    },
+                                    "extractEntityPath": {
+                                        "expression": true,
+                                        "value": "$.entity"
+                                    },
+                                    "includeCookies": {
+                                        "value": false
+                                    },
+                                    "responseType": {
+                                        "value": "JSON"
+                                    }
+                                }
+                            },
+                            "redirects": {
+                                "value": {
+                                    "allowCircularRedirect": {
+                                        "value": false
+                                    },
+                                    "allowRelativeRedirect": {
+                                        "value": true
+                                    },
+                                    "followOriginalMethod": {
+                                        "value": false
+                                    },
+                                    "followRedirection": {
+                                        "value": true
+                                    },
+                                    "maxRedirect": {
+                                        "expression": false,
+                                        "value": 10
+                                    }
+                                }
+                            },
+                            "retry": {
+                                "value": {
+                                    "autoRetry429": {
+                                        "value": true
+                                    },
+                                    "maxRetry": {
+                                        "value": 5
+                                    },
+                                    "retryCondition": {
+                                        "value": "Connection Errors"
+                                    },
+                                    "retryInterval": {
+                                        "value": 3
+                                    },
+                                    "useRetryAfterHeader": {
+                                        "value": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "enableDebug": {
+                        "value": true
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formEncodeSpace": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": []
+                    },
+                    "httpEntity": {
+                        "value": {
+                            "binaryFile": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "entityType": {
+                                "value": "none"
+                            },
+                            "multipartForm": {
+                                "value": [
+                                    {
+                                        "partContentType": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partKey": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "partType": {
+                                            "value": "Text"
+                                        },
+                                        "partValue": {
+                                            "expression": false,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "multipartSubtype": {
+                                "expression": false,
+                                "value": "form-data"
+                            },
+                            "rawEntity": {
+                                "expression": true,
+                                "value": "$"
+                            },
+                            "urlEncodedForm": {
+                                "value": []
+                            }
+                        }
+                    },
+                    "httpMethod": {
+                        "expression": false,
+                        "value": "GET"
+                    },
+                    "pagination": {
+                        "value": {
+                            "hasNext": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "maxPage": {
+                                "expression": false,
+                                "value": null
+                            },
+                            "nextUrl": {
+                                "expression": true,
+                                "value": null
+                            },
+                            "overrideHeaders": {
+                                "value": [
+                                    {
+                                        "overrideHeaderName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideHeaderValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideParams": {
+                                "value": [
+                                    {
+                                        "overrideParamName": {
+                                            "expression": false,
+                                            "value": null
+                                        },
+                                        "overrideParamValue": {
+                                            "expression": true,
+                                            "value": null
+                                        }
+                                    }
+                                ]
+                            },
+                            "overrideURI": {
+                                "value": false
+                            },
+                            "paginationInterval": {
+                                "value": 0
+                            },
+                            "reuseParamsForPagination": {
+                                "value": false
+                            }
+                        }
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "queryParam": {
+                        "value": [
+                            {
+                                "paramKeyProp": {
+                                    "expression": false,
+                                    "value": "q"
+                                },
+                                "paramValProp": {
+                                    "expression": true,
+                                    "value": "$city"
+                                }
+                            },
+                            {
+                                "paramKeyProp": {
+                                    "expression": false,
+                                    "value": "appid"
+                                },
+                                "paramValProp": {
+                                    "expression": false,
+                                    "value": "56fe225c4a7e0b2c5e504fc692d7d1f7"
+                                }
+                            },
+                            {
+                                "paramKeyProp": {
+                                    "expression": false,
+                                    "value": "units"
+                                },
+                                "paramValProp": {
+                                    "expression": false,
+                                    "value": "metric"
+                                }
+                            }
+                        ]
+                    },
+                    "uri": {
+                        "expression": false,
+                        "value": "https://api.openweathermap.org/data/2.5/weather"
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000002": {
+            "class_id": "com-snaplogic-snaps-transform-datatransform",
+            "class_version": 4,
+            "instance_id": "11111111-1111-1111-1111-000000000002",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "Map - Weather Info"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "settings": {
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "nullSafeAccess": {
+                        "value": false
+                    },
+                    "passThrough": {
+                        "value": false
+                    },
+                    "transformations": {
+                        "value": {
+                            "mappingRoot": {
+                                "value": "$"
+                            },
+                            "mappingTable": {
+                                "value": [
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$entity.sys.country"
+                                        },
+                                        "targetPath": {
+                                            "value": "$Country"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$entity.name"
+                                        },
+                                        "targetPath": {
+                                            "value": "$City"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "Math.round($entity.main.temp)"
+                                        },
+                                        "targetPath": {
+                                            "value": "$Temperature"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "Math.round($entity.main.feels_like)"
+                                        },
+                                        "targetPath": {
+                                            "value": "$FeelsLike"
+                                        }
+                                    },
+                                    {
+                                        "expression": {
+                                            "expression": true,
+                                            "value": "$entity.weather[0].description"
+                                        },
+                                        "targetPath": {
+                                            "value": "$Description"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000003": {
+            "class_id": "com-snaplogic-snaps-transform-jsonformatter",
+            "class_version": 2,
+            "instance_id": "11111111-1111-1111-1111-000000000003",
+            "property_map": {
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "JSON Formatter"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    }
+                },
+                "output": {
+                    "output0": {
+                        "label": {
+                            "value": "output0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "settings": {
+                    "contentPath": {
+                        "value": "$"
+                    },
+                    "deriveSchemaLimit": {
+                        "value": "None"
+                    },
+                    "execution_mode": {
+                        "value": "Validate & Execute"
+                    },
+                    "formatSingleDocument": {
+                        "value": false
+                    },
+                    "header": {
+                        "value": [
+                            {
+                                "expression": {
+                                    "expression": true,
+                                    "value": null
+                                },
+                                "targetPath": {
+                                    "value": null
+                                }
+                            }
+                        ]
+                    },
+                    "ignoreEmptyStream": {
+                        "value": true
+                    },
+                    "jsonLines": {
+                        "value": true
+                    },
+                    "prettyPrint": {
+                        "value": false
+                    },
+                    "schema": {
+                        "expression": false,
+                        "value": null
+                    },
+                    "supportTypeExts": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        },
+        "11111111-1111-1111-1111-000000000004": {
+            "class_id": "com-snaplogic-snaps-binary-write",
+            "class_version": 3,
+            "instance_id": "11111111-1111-1111-1111-000000000004",
+            "property_map": {
+                "account": {
+                    "account_ref": {
+                        "value": {}
+                    }
+                },
+                "error": {
+                    "error0": {
+                        "label": {
+                            "value": "error0"
+                        },
+                        "view_type": {
+                            "value": "document"
+                        }
+                    },
+                    "error_behavior": {
+                        "value": "fail"
+                    }
+                },
+                "info": {
+                    "label": {
+                        "value": "File Writer"
+                    },
+                    "notes": {}
+                },
+                "input": {
+                    "input0": {
+                        "label": {
+                            "value": "input0"
+                        },
+                        "view_type": {
+                            "value": "binary"
+                        }
+                    }
+                },
+                "output": {},
+                "settings": {
+                    "UserPermissionsKey": {
+                        "value": []
+                    },
+                    "advancedProperties": {
+                        "value": []
+                    },
+                    "cannedAcls": {
+                        "value": "None"
+                    },
+                    "createDir": {
+                        "value": false
+                    },
+                    "executable_during_suggest": {
+                        "value": false
+                    },
+                    "execution_mode": {
+                        "value": "Execute only"
+                    },
+                    "fileAction": {
+                        "value": "OVERWRITE"
+                    },
+                    "filename": {
+                        "expression": false,
+                        "value": "Temperatures.json"
+                    },
+                    "flushIntervalKb": {
+                        "value": -1
+                    },
+                    "preventURLEncoding": {
+                        "value": false
+                    },
+                    "retries": {
+                        "expression": false,
+                        "value": 0
+                    },
+                    "retryInterval": {
+                        "expression": false,
+                        "value": 1
+                    },
+                    "validate": {
+                        "value": false
+                    },
+                    "writeEmptyFile": {
+                        "value": false
+                    },
+                    "writeHeader": {
+                        "value": false
+                    }
+                },
+                "view_serial": 100
+            }
+        }
+    }
+}
