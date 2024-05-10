@@ -1,0 +1,20 @@
+{
+    "job_class": "PipelineJob",
+    "job_name": "01_p1_CurrentWeatherTask",
+    "note": "",
+    "parameters": {
+        "enabled": true,
+        "execution_timeout": 74,
+        "include_external_urls": true,
+        "job_type": "standard",
+        "pipeline_parameters": {
+            "city": null,
+            "requestID": null
+        },
+        "pipeline_path": "01_p1_CurrentWeather",
+        "snaplex_path": "IW-Ground"
+    },
+    "schedule": {},
+    "trigger": {},
+    "trigger_type": "ScheduleTrigger"
+}

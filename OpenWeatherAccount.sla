@@ -1,0 +1,32 @@
+{
+    "class_id": "com-snaplogic-snaps-apisuite-accounts-basicauthaccount",
+    "class_version": 1,
+    "migration_metadata": {
+        "source_org": "Interworks-Partner"
+    },
+    "property_map": {
+        "info": {
+            "label": {
+                "value": "OpenWeatherAccount"
+            },
+            "notes": {
+                "value": null
+            }
+        },
+        "settings": {
+            "password": {
+                "expression": false,
+                "fp": "47350bca925101a6b508b7b53932e112ad50b600639a7ac218cd42561daba81e",
+                "key": "account-cloud-managed-5b7548984dd5a8001fb7e9ca-2018-08-16T09:49:24-650697+00:00",
+                "sym_iv": "8flvZPlj7VFWfRlcANsxKw==",
+                "sym_key": "BHerKLwOhTFma/T3irz/S4X46fj2o62eHTPW+lEKh1RFUF1QdFbHYn/xeD1eu1jy4RBJRTTqCPmhbH48rfqrhsSz70aRarFs/7lLNsws3xU6Z2/wZAJ0A2pNmttSZoFGtM8IRVYemlQn7lqRDF91MjJLmlCfKADffvFkvIsNRlehqCJ8mahOdTMai1pUCTUwyGOHd3TW1Dy9D2i4GqgoH8MTSUuoWb4tsXqKOeCLxS/Wy7H3NJGBG4uCTq4Gl/5xF2EmBKk2aFShtsP6kKgKzTn1rm2wBu/IPkrRhH4s8BpBT/qls8HDzR6lPr+QH3JaXOLNSUc3ifOxvan09lStTQ==",
+                "value": "AWMD/xVzk/dz/hL11MJ+AA=="
+            },
+            "username": {
+                "expression": false,
+                "value": "sample@domain.com"
+            }
+        },
+        "view_serial": 100
+    }
+}
