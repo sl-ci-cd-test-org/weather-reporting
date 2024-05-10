@@ -1,0 +1,79 @@
+name: sl-checkout-to-test
+run-name: ${{ github.actor }} triggered sl-checkout-to-test workflow.
+on:
+    push:
+        branches:
+            - 'test'
+        paths:
+            - '**.slp'
+            - '**.slt'
+            - '**.sla'
+env:
+    SL_SOURCE_ORG: Interworks-Partner
+    SL_TARGET_ORG: Interworks-Partner
+    SL_SOURCE_PSPACE: ci-cd-github
+    SL_TARGET_PSPACE: ci-cd-github-test
+    SL_SOURCE_PROJECT: weather-reporting
+    SL_TARGET_PROJECT: weather-reporting-test
+    SL_TEST_TASK: 00_Test_PipelineTask
+
+jobs:
+    generate-tasks-config:
+        runs-on: ubuntu-latest
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+            
+            - name: tasks-config-generation
+              run: python .github/scripts/generate-tasks-config.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_SOURCE_ORG" "$SL_TARGET_ORG" "$SL_SOURCE_PSPACE" "$SL_TARGET_PSPACE" "$SL_SOURCE_PROJECT" "$SL_TARGET_PROJECT"
+    
+            - name: uploading-tasks-config
+              uses: actions/upload-artifact@v3
+              with:
+                name: tasks-config-artifact
+                path: tasks-config.json
+    
+    sl-checkout-to-test:
+        runs-on: ubuntu-latest
+        needs: generate-tasks-config
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+
+            - name: sl-checkout-to-test
+              run: python .github/scripts/sl-checkout-to-test.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT" "${{ github.REPOSITORY }}"
+
+    sl-update-tasks:
+        runs-on: ubuntu-latest
+        needs: sl-checkout-to-test
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+            
+            - name: downloading-tasks-config
+              uses: actions/download-artifact@v3
+              with:
+                name: tasks-config-artifact
+            
+            - name: update-tasks
+              run: python .github/scripts/sl-update-tasks.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT"     
+
+    sl-run-test-pipeline:
+        needs: sl-update-tasks
+        runs-on: ubuntu-latest
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+
+            - name: sl-run-test-pipeline
+              run: python .github/scripts/sl-run-test-pipeline.py "${{ secrets.SL_EMAIL }}" "${{ secrets.SL_PW }}" "$SL_TARGET_ORG" "$SL_TARGET_PSPACE" "$SL_TARGET_PROJECT" "$SL_TEST_TASK"
+
+    gh-delete-artifacts:
+        runs-on: ubuntu-latest
+        needs: sl-run-test-pipeline
+        steps:
+            - name: repository-checkout
+              uses: actions/checkout@v3
+
+            - name: run-delete-workflow
+              run: python .github/scripts/gh-trigger-delete-artifacts-workflow.py "${{ github.REPOSITORY }}" "${{ secrets.GH_TOKEN }}"
