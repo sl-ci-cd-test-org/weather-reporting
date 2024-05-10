@@ -1,0 +1,77 @@
+{
+    "job_class": "PipelineJob",
+    "job_name": "01_p3_PastMonthWeather Task",
+    "note": "",
+    "parameters": {
+        "enabled": true,
+        "job_type": "standard",
+        "notification": {
+            "recipients": "aleksandar.angelevski@iwconnect.com",
+            "states": [
+                "Failed",
+                "Stopped",
+                "Suspended"
+            ]
+        },
+        "pipeline_parameters": {},
+        "pipeline_path": "01_p3_PastMonthWeather",
+        "snaplex_path": "IW-Ground"
+    },
+    "schedule": {
+        "repeat": {
+            "blackout_dates": [],
+            "by": "weeks",
+            "cron": {
+                "day": "*",
+                "day_of_week": "*",
+                "hour": "*",
+                "minute": "0",
+                "month": "*"
+            },
+            "ends": {
+                "occurrences": null,
+                "when": "never"
+            },
+            "every": 1,
+            "on": {
+                "day": [],
+                "day_of_week": [
+                    "mon",
+                    "tue"
+                ]
+            }
+        },
+        "start_date": "2025-05-02",
+        "start_time": "14:30:00",
+        "time_zone": "US/Pacific"
+    },
+    "trigger": {
+        "repeat": {
+            "blackout_dates": [],
+            "by": "weeks",
+            "cron": {
+                "day": "*",
+                "day_of_week": "*",
+                "hour": "*",
+                "minute": "0",
+                "month": "*"
+            },
+            "ends": {
+                "occurrences": null,
+                "when": "never"
+            },
+            "every": 1,
+            "on": {
+                "day": [],
+                "day_of_week": [
+                    "mon",
+                    "tue"
+                ]
+            }
+        },
+        "start_date": "2025-05-02",
+        "start_time": "14:30:00",
+        "time_zone": "US/Pacific"
+    },
+    "trigger_type": "ScheduleTrigger"
+}

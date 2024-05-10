@@ -1,0 +1,23 @@
+{
+    "job_class": "PipelineJob",
+    "job_name": "01_p2_PastWeekWeatherUntrackedTask",
+    "note": "",
+    "parameters": {
+        "enabled": true,
+        "job_type": "standard",
+        "pipeline_parameters": {},
+        "pipeline_path": "01_p2_PastWeekWeather",
+        "snaplex_path": "IW-Ground"
+    },
+    "schedule": {
+        "start_date": "2023-08-05",
+        "start_time": "15:06:05",
+        "time_zone": "US/Pacific"
+    },
+    "trigger": {
+        "start_date": "2023-08-05",
+        "start_time": "15:06:05",
+        "time_zone": "US/Pacific"
+    },
+    "trigger_type": "ScheduleTrigger"
+}
