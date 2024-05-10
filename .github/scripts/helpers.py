@@ -260,7 +260,7 @@ def pete_generate_documentation(pete_key, pete_token, sl_org, sl_pspace, sl_proj
     response = requests.request("POST", url, headers=headers, data=payload)
     # Validate response
     if response.status_code != 201:
-        exit("# Invalid request - IWDG Generate Documentation endpoint! #")
+        exit(response)
     else:
         response = json.loads(response.text)
         print(f"-- IWDG: {' - '.join(response)} --")
