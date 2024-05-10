@@ -20,7 +20,7 @@ env:
     SL_SOURCE_PROJECT: weather-reporting-test
     SL_TARGET_PROJECT: weather-reporting-prod
     SL_TEST_TASK: 00_Test_PipelineTask
-    PETE_TARGET_SYSTEM: Sharepoint # ["Sharepoint","Confluence","PDF"] - Default PDF
+    PETE_TARGET_SYSTEM: PDF # ["Sharepoint","Confluence","PDF"] - Default PDF
     PETE_MAIN_PAGE: weather-reporting-pete
 
 jobs:
