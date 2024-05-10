@@ -4,7 +4,7 @@
     "note": "",
     "parameters": {
         "enabled": true,
-        "execution_timeout": 75,
+        "execution_timeout": 76,
         "include_external_urls": true,
         "job_type": "standard",
         "pipeline_parameters": {
