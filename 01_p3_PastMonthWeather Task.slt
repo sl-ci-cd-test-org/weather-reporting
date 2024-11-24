@@ -15,7 +15,7 @@
         },
         "pipeline_parameters": {},
         "pipeline_path": "01_p3_PastMonthWeather",
-        "snaplex_path": "IW-Ground"
+        "snaplex_path": "IW-Ground-Windows"
     },
     "schedule": {
         "repeat": {

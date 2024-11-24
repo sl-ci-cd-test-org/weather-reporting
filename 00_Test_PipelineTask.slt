@@ -9,7 +9,7 @@
         "job_type": "standard",
         "pipeline_parameters": {},
         "pipeline_path": "00_Test_Pipeline",
-        "snaplex_path": "IW-Ground"
+        "snaplex_path": "IW-Ground-Windows"
     },
     "schedule": {},
     "trigger": {},
